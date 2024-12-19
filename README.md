@@ -1,2 +1,4 @@
 # libTmcHelpers
-Helper utils for libTmcAsset
+Helper utils for tmcSdk
+
+Install instructions coming Soon™
