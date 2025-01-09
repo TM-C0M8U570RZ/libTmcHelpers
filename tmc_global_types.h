@@ -4,6 +4,8 @@
 #include <string>
 #include <fstream>
 
+#ifndef TMC_USING // define the macro to include something else that makes these aliases (This file comes second in that case)
+#define TMC_USING
 using s8 = int8_t;
 using s16 = int16_t;
 using s32 = int32_t;
@@ -16,6 +18,7 @@ using f32 = float;
 using f64 = double;
 using ptr = void*;
 using uchr = wchar_t;
+#endif
 
 namespace std {
 template <>
@@ -23,6 +26,9 @@ struct char_traits<u8>
 {
     using char_type = u8;
     using int_type = s32;
+    using pos_type = std::streampos;
+    using off_type = std::streamoff;
+    using state_type = std::mbstate_t;
     static void assign(char_type& c1, const char_type& c2)
     {
         c1 = c2;
