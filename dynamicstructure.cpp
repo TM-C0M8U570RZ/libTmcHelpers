@@ -6056,14 +6056,6 @@ void DynamicStructure::set(std::vector<f64> elm, u64 index)
     }
 }
 
-template<class T>
-void DynamicStructure::set(T elm, const std::string& key)
-{
-    if (!hasKey(key)) return;
-    u64 index = keyToIndex(key);
-    set<T>(elm, index);
-}
-
 std::vector<u8> DynamicStructure::varToU8(u64 index)
 {
     if (index >= getKeyCount())

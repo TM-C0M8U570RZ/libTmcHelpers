@@ -95,7 +95,12 @@ public:
     void set(T elm, u64 index);
 
     template<class T>
-    void set(T elm, const std::string& key);
+    void set(T elm, const std::string& key)
+    {
+        if (!hasKey(key)) return;
+        u64 index = keyToIndex(key);
+        set<T>(elm, index);
+    }
 
     std::vector<u8> varToU8(u64 index);
 
