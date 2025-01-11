@@ -13,7 +13,7 @@ add_library(TmcHelpers STATIC
   tmc_global_1to1_algos.cpp
   dynamicstructure.h dynamicstructure.cpp
   vectextra.h
-
+  vectextra.cpp
   tmc_math.cpp
   tmc_math.h
 )

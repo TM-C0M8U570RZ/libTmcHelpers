@@ -22,4 +22,6 @@ void appendVecs(std::vector<T, std::allocator<T>>& v1, std::vector<T, std::alloc
         v1.push_back(v2[i]);
     }
 }
+
+std::vector<char> moveToCharVec(std::vector<u8>& vec);
 };
