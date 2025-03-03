@@ -133,4 +133,12 @@ using s8Vec = std::vector<s8>;
 using ufstream = std::basic_fstream<u8>;
 using uifstream = std::basic_ifstream<u8>;
 using uofstream = std::basic_ofstream<u8>;
+namespace Asset
+{
+struct rgbaCol {u8 r; u8 g; u8 b; u8 a;};
+}
+namespace Bidoof
+{
+struct criterion {bool positive; std::vector<std::string> group;};
+}
 }
